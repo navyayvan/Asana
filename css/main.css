@@ -4,22 +4,32 @@ body {
 
 header {
 	color: white;
-	font-family: Arial;
+	font-family: 'Dancing Script', cursive; 
 	text-align: center;
 }
 
 .cell {
 	height: 120px;
 	width: 120px;
-	border: 2px black solid;
-	padding: 3px;
+	border: 1px black solid;
+	padding: 0;
 	display: inline-block;
+	margin: auto;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 120px;
+	font-family: 'PT Sans Italic', cursive;
+	font-size: 1em;
+	color: black;
 
 }
 
 #board {
 	display:flex;
 	justify-content: center;
+	margin: auto 30px;
+
 }
 
 
