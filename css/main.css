@@ -1,0 +1,30 @@
+body {
+	background-color: powderblue;
+}
+
+header {
+	color: white;
+	font-family: Arial;
+	text-align: center;
+}
+
+.cell {
+	height: 120px;
+	width: 120px;
+	border: 2px black solid;
+	padding: 3px;
+	display: inline-block;
+
+}
+
+#board {
+	display:flex;
+	justify-content: center;
+}
+
+
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
