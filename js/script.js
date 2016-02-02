@@ -1,19 +1,18 @@
-var playerOne;
-var playerTwo;
-
-
 $(document).ready(function() {
+
+	swal("Welcome!", "This is a two player game. Player One begins.");
 	
 	$('.photo').draggable( {
 		revert: 'invalid',
 	});
 
-	
+
 	$('#2').droppable( {
 		accept: "#5",
 		drop: function() {
-			$('#2').show(0).delay(2000).hide();
-			$('#5').show(0).delay(2000).hide();
+
+			$('#2').hide();
+			$('#5').hide();
 		}
 	});
 
