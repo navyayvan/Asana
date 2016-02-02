@@ -6,11 +6,12 @@ header {
 	color: white;
 	font-family: 'Dancing Script', cursive; 
 	text-align: center;
+	font-size: 1.3em;
 }
 
 .cell {
-	height: 120px;
-	width: 120px;
+	height: 130px;
+	width: 130px;
 	border: 1px black solid;
 	padding: 0;
 	display: inline-block;
@@ -18,7 +19,7 @@ header {
 	float: left;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 120px;
+	line-height: 130px;
 	font-family: 'PT Sans Italic', cursive;
 	font-size: 1em;
 	color: black;
@@ -30,6 +31,11 @@ header {
 	justify-content: center;
 	margin: auto 30px;
 
+}
+
+.row {
+	width: 264px;
+	margin: 15px;
 }
 
 
