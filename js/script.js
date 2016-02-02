@@ -1,16 +1,36 @@
+var playerScores = { player1: 0, player2: 0}
+
+currentPlayer = 'player1'; 
+
 $(document).ready(function() {
 
 	swal("Welcome!", "This is a two player game. Player One begins.");
 	
 	$('.photo').draggable( {
-		revert: 'invalid',
+		revert: function(valid) {
+			if (valid) {
+				playerScores[currentPlayer] ++;
+				$('#displayScoreOne').text(playerScores.player1);
+				$('#displayScoreTwo').text(playerScores.player2);
+
+			}
+			else {
+				if (currentPlayer === 'player1') {
+					currentPlayer = 'player2';
+				}
+				else {
+					currentPlayer = 'player1';
+				}
+			}
+			console.log(playerScores);
+			return !valid;
+		}
 	});
 
 
 	$('#2').droppable( {
 		accept: "#5",
 		drop: function() {
-
 			$('#2').hide();
 			$('#5').hide();
 		}
@@ -143,6 +163,5 @@ $(document).ready(function() {
 			$('#25').hide();
 		}
 	});
-
 
 });

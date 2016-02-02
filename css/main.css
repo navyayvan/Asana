@@ -16,6 +16,7 @@ header {
 	height: 40px;
 	width: 80px;
 	font-size: 1em;
+	color:black;
 }
 
 .displayScore {
@@ -29,7 +30,7 @@ header {
 	height: 120px;
 	width: 120px;
 	border: 1px white solid;
-	padding: 0;
+	padding: 1px;
 	display: inline-block;
 	margin: auto;
 	float: left;
