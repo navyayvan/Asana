@@ -12,19 +12,21 @@ $(document).ready(function() {
 				playerScores[currentPlayer] ++;
 				$('#displayScoreOne').text(playerScores.player1);
 				$('#displayScoreTwo').text(playerScores.player2);
-
-			}
-			else {
+			} else {
 				if (currentPlayer === 'player1') {
 					currentPlayer = 'player2';
-				}
-				else {
+				} else {
 					currentPlayer = 'player1';
 				}
 			}
-			console.log(playerScores);
+			if (playerScores.player1 + playerScores.player2 === 16) {
+				swal("The game is up. Great job!");
+			}
 			return !valid;
+
 		}
+
+
 	});
 
 
