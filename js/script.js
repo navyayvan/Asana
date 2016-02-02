@@ -4,15 +4,16 @@ var playerTwo;
 
 $(document).ready(function() {
 	
-	$('.photo').draggable();
+	$('.photo').draggable( {
+		revert: 'invalid',
+	});
 
 	
 	$('#2').droppable( {
 		accept: "#5",
-		rvevert: 'invalid',
 		drop: function() {
-			$('#2').hide();
-			$('#5').hide();
+			$('#2').show(0).delay(2000).hide();
+			$('#5').show(0).delay(2000).hide();
 		}
 	});
 
