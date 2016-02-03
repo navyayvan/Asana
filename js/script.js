@@ -1,5 +1,4 @@
-var playerScores = { player1: 0, player2: 0}
-
+var playerScores = { player1: 0, player2: 0}; 
 currentPlayer = 'player1'; 
 
 $(document).ready(function() {
@@ -12,28 +11,32 @@ $(document).ready(function() {
 				playerScores[currentPlayer] ++;
 				$('#displayScoreOne').text(playerScores.player1);
 				$('#displayScoreTwo').text(playerScores.player2);
+			// upon successful drop: increments by one and displays value 
 			} else {
 				if (currentPlayer === 'player1') {
 					currentPlayer = 'player2';
 					document.getElementById('playerTwoScore').style.color = "red";
 					document.getElementById('playerOneScore').style.color="black";
+				// upon unsuccessful drop by player1: switches the player and highlights new player in red
 				} else {
 					currentPlayer = 'player1';
 					document.getElementById('playerTwoScore').style.color= "black";
 					document.getElementById('playerOneScore').style.color = "red";
 				}
+				// upon unsuccessful drop by player2: switches player and highlights new player in red
 			}
+
 			if (playerScores.player1 + playerScores.player2 === 16) {
 				swal("The game is up. Great job!");
+			//checks to see if game is finished, issues alert
 			}
 			return !valid;
-
 		}
-
 
 	});
 
 
+	//following code matches drags and drops and hides both divs on successful matching. is super repetitive.
 	$('#2').droppable( {
 		accept: "#5",
 		drop: function() {
@@ -47,7 +50,10 @@ $(document).ready(function() {
 		drop: function() {
 			$('#3').hide();
 			$('#1').hide();
+			swal("Bakasana or Crow Pose:", 
+			"arm balancing asana in which hands are planted on the floor, shins rest upon upper arms, and feet lift up.");
 		}
+
 	});
 
 	$('#6').droppable( {
@@ -55,6 +61,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#6').hide();
 			$('#8').hide();
+			swal("Bharadvaja's twist:",
+			 "basic seated spinal twist");
 		}
 	});
 
@@ -63,6 +71,9 @@ $(document).ready(function() {
 		drop: function() {
 			$('#7').hide();
 			$('#4').hide();
+			swal("Peacock Pose:",
+			"horizontal arm balance in which one's entire body is supported by the palms ");
+
 		}
 	});
     
@@ -71,6 +82,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#9').hide();
 			$('#15').hide();
+			swal("Lord of the Dance Pose:",
+			"horizontal arm balance in which one's entire body is supported by the palms ");
 		}
 	});
 
