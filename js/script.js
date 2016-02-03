@@ -15,8 +15,12 @@ $(document).ready(function() {
 			} else {
 				if (currentPlayer === 'player1') {
 					currentPlayer = 'player2';
+					document.getElementById('playerTwoScore').style.color = "red";
+					document.getElementById('playerOneScore').style.color="black";
 				} else {
 					currentPlayer = 'player1';
+					document.getElementById('playerTwoScore').style.color= "black";
+					document.getElementById('playerOneScore').style.color = "red";
 				}
 			}
 			if (playerScores.player1 + playerScores.player2 === 16) {
