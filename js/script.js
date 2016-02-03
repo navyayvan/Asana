@@ -3,7 +3,9 @@ currentPlayer = 'player1';
 
 $(document).ready(function() {
 
-	swal("Welcome!", "This is a two player game. Player One begins.");
+	swal({ title: "Welcome.", 
+		text: "<p>This is a <b>two</b> player game. </p> <p>Drag photo tiles to their pose names.</p> <p> Each successful match accrues <b>one</b> point.</p> <p> A turn lasts as long as matches are made successfully.</p> <p>When the board is clear, the game is over. </p> <p> <b> Player One</b> begins.</p>",
+  	   html: true });
 	
 	$('.photo').draggable( {
 		revert: function(valid) {
@@ -11,37 +13,40 @@ $(document).ready(function() {
 				playerScores[currentPlayer] ++;
 				$('#displayScoreOne').text(playerScores.player1);
 				$('#displayScoreTwo').text(playerScores.player2);
-			// upon successful drop: increments by one and displays value 
+				// upon successful drop: increments by one and displays value 
 			} else {
 				if (currentPlayer === 'player1') {
 					currentPlayer = 'player2';
 					document.getElementById('playerTwoScore').style.color = "red";
 					document.getElementById('playerOneScore').style.color="black";
+					swal("Player Two's turn!")
 				// upon unsuccessful drop by player1: switches the player and highlights new player in red
 				} else {
 					currentPlayer = 'player1';
-					document.getElementById('playerTwoScore').style.color= "black";
+					document.getElementById('playerTwoScore').style.color = "black";
 					document.getElementById('playerOneScore').style.color = "red";
+					swal("Player One's turn!")
 				}
 				// upon unsuccessful drop by player2: switches player and highlights new player in red
 			}
 
 			if (playerScores.player1 + playerScores.player2 === 16) {
 				swal("The game is up. Great job!");
-			//checks to see if game is finished, issues alert
+			//checks to see if game is finished, and if so, issues an alert.
 			}
 			return !valid;
 		}
-
 	});
 
 
-	//following code matches drags and drops and hides both divs on successful matching. is super repetitive.
-	$('#2').droppable( {
+	//following code matches drags and drops and hides both divs on successful matching. is super repetitive
+$('#2').droppable( {
 		accept: "#5",
 		drop: function() {
 			$('#2').hide();
 			$('#5').hide();
+			swal ("Child's Pose:",
+			"A resting pose in which the knees are under the chest while the head is bowed, and the arms are stretched.");
 		}
 	});
 
@@ -50,7 +55,7 @@ $(document).ready(function() {
 		drop: function() {
 			$('#3').hide();
 			$('#1').hide();
-			swal("Bakasana or Crow Pose:", 
+			swal("Crow Pose:", 
 			"arm balancing asana in which hands are planted on the floor, shins rest upon upper arms, and feet lift up.");
 		}
 
@@ -61,8 +66,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#6').hide();
 			$('#8').hide();
-			swal("Bharadvaja's twist:",
-			 "basic seated spinal twist");
+			swal("Bharadvaja's Twist:",
+			 "basic seated spinal twist.");
 		}
 	});
 
@@ -72,7 +77,7 @@ $(document).ready(function() {
 			$('#7').hide();
 			$('#4').hide();
 			swal("Peacock Pose:",
-			"horizontal arm balance in which one's entire body is supported by the palms ");
+			"horizontal arm balance in which one's entire body is supported by the palms");
 
 		}
 	});
@@ -92,6 +97,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#12').hide();
 			$('#10').hide();
+			swal("Eagle Pose:",
+			"balance on one foot in a shallow squat in which both sets of limbs are crossed")
 		}
 	});
 
@@ -100,6 +107,9 @@ $(document).ready(function() {
 		drop: function() {
 			$('#13').hide();
 			$('#14').hide();
+			swal("Pose Dedicated to the Sage Marichi:",
+			"A forward bend in which the hips are opened. ")
+
 		}
 	});
 
@@ -108,6 +118,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#16').hide();
 			$('#11').hide();
+			swal("One-Legged King Pigeon Pose:",
+			"A seated backbend in which the ankle is grasped behind the head. ")
 		}
 	});
 
@@ -116,6 +128,8 @@ $(document).ready(function() {
 			drop: function() {
 				$('#18').hide();
 				$('#20').hide();
+				swal("Noose Pose:",
+				"A squatting twist in which one wraps their arms around legs with their hands clasped behind their back. ")
 			}
 		});
 
@@ -124,22 +138,19 @@ $(document).ready(function() {
 		drop: function() {
 			$('#19').hide();
 			$('#17').hide();
+			swal("Triangle Pose:",
+			"A standing pose in which one arm extends skyward while the other rests near the foot.")
 		}
 	});
 
-	$('#16').droppable( {
-		accept: "#11",
-		drop: function() {
-			$('#16').hide();
-			$('#11').hide();
-		}
-	});
 
 	$('#22').droppable( {
 		accept: "#21",
 		drop: function() {
 			$('#22').hide();
 			$('#21').hide();
+			swal("Upward Plank Pose:",
+			"A pose in which the body is supported parallel to the ground, chest facing up. ")
 		}
 	});
 
@@ -148,6 +159,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#23').hide();
 			$('#24').hide();
+			swal ("Locust Pose:",
+			"A backbend in which one, while face down and parallel to the floor, raises both the legs and the arms.")
 		}
 	});
 
@@ -156,6 +169,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#26').hide();
 			$('#29').hide();
+			swal ("Warrior II Pose: ",
+			"Forward lunge pose in which one arm is extended parallel forward, and the other backward.")
 		}
 	});
 
@@ -164,6 +179,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#27').hide();
 			$('#32').hide();
+			swal ("Warrior III Pose: ",
+			"Standing pose in which one balances on one foot while the rest of the body is held perpendicular to the floor in a straight line. ")
 		}
 	});
 
@@ -172,6 +189,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#30').hide();
 			$('#28').hide();
+			swal ("Warrior I Pose: ",
+			"A forward lunge pose in which both arms are extended skyward. ")
 		}
 	});
 
@@ -180,6 +199,8 @@ $(document).ready(function() {
 		drop: function() {
 			$('#31').hide();
 			$('#25').hide();
+			swal ("Chair Pose: ",
+			"A squat in which both arms are raised skyward. ")
 		}
 	});
 
