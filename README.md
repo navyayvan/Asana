@@ -3,11 +3,11 @@
 <p>This is an educational, browser-based, drag and drop game for both yoga instructors and enthusiasts. It utilizes jQuery's drag and drop features in combination with Sweet Alert to challenge players into learning sanskrit names for poses(asana). Responsive design has been implemented to start making a mobile friendly site, but more work is needed on that.</p>
 
 <h2>Features</h2>
-Two players
-Drag and drop tiles
-Scoreboard
-Informative alert boxes
-Links to resources
+<p>Two players<p>
+<p>Drag and drop tiles<p>
+<p>Scoreboard<p>
+<p>Informative alert boxes<p>
+<p>Links to resources<p>
 
 
 <h2> Credits </h2>
