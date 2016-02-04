@@ -177,7 +177,7 @@ $('#2').droppable( {
 	$('#27').droppable( {
 		accept: "#32",
 		drop: function() {
-			$('#27').hide();
+			$('#27').hideg();
 			$('#32').hide();
 			swal ("Warrior III Pose: ",
 			"A standing pose in which one balances on one foot while the rest of the body is held perpendicular to the floor in a straight line. ")
