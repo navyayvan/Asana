@@ -72,7 +72,29 @@ span {
 }
 
 
+#resources {
+	clear:all;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
+}
 
+a {
+	color: black;
+	font-family: 'Maven-Pro', sans-serif;
+}
+
+a:hover {
+	color: white;}
+
+a:link {
+	text-decoration:none;
+}
+
+a:visited {
+	text-decoration: none;
+}
 img {
 	max-width: 100%;
 	max-height: 100%;
