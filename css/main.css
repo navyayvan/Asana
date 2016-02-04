@@ -21,7 +21,9 @@ header {
 	color:black;
 }
 
-
+#playerOneScore {
+	color:red;
+}
 
 .displayScore {
 	height: 28px;
@@ -81,19 +83,25 @@ img {
     
 
     body {
-    	background-color: powderblue;
+    	background-color: lightgray;
     }
 
     header {
     	max-width: 500px;
+    	font-size:1em;
+    	display:flex;
+    	justify-content:space-between;
+    	text-align: center;
     }
     
     .row {
     	width: 500px;
-    	margin:30px;
+    	padding: 3px;
+    	float: center;
     }
 
+
     #board {
-    	display: block;
+    	display: inline-block;
     }
 }

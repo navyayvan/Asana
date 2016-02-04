@@ -3,7 +3,7 @@ currentPlayer = 'player1';
 
 $(document).ready(function() {
 
-	swal({ title: "Welcome.", 
+	swal({ title: "Namaste!", 
 		text: "<p>This is a <b>two</b> player game. </p> <p>Drag photo tiles to their pose names.</p> <p> Each successful match accrues <b>one</b> point.</p> <p> A turn lasts as long as matches are made successfully.</p> <p>When the board is clear, the game is over. </p> <p> <b> Player One</b> begins.</p>",
   	   html: true });
 	
@@ -31,8 +31,8 @@ $(document).ready(function() {
 			}
 
 			if (playerScores.player1 + playerScores.player2 === 16) {
-				swal("The game is up. Great job!");
-			//checks to see if game is finished, and if so, issues an alert.
+				swal("The game is finished. Well done!", location.reload());
+			//checks to see if game is finished, and if so, issues an alert, reloads page.
 			}
 			return !valid;
 		}
@@ -46,7 +46,7 @@ $('#2').droppable( {
 			$('#2').hide();
 			$('#5').hide();
 			swal ("Child's Pose:",
-			"A resting pose in which the knees are under the chest while the head is bowed, and the arms are stretched.");
+			"A resting pose, in which the knees are under the chest while the head is bowed and the arms are stretched.");
 		}
 	});
 
@@ -56,7 +56,7 @@ $('#2').droppable( {
 			$('#3').hide();
 			$('#1').hide();
 			swal("Crow Pose:", 
-			"arm balancing asana in which hands are planted on the floor, shins rest upon upper arms, and feet lift up.");
+			"An arm balancing pose in which the hands are planted on the floor, shins are rested upon upper arms, and the feet are lifted up.");
 		}
 
 	});
@@ -67,7 +67,7 @@ $('#2').droppable( {
 			$('#6').hide();
 			$('#8').hide();
 			swal("Bharadvaja's Twist:",
-			 "basic seated spinal twist.");
+			 "A basic seated spinal twist.");
 		}
 	});
 
@@ -77,7 +77,7 @@ $('#2').droppable( {
 			$('#7').hide();
 			$('#4').hide();
 			swal("Peacock Pose:",
-			"horizontal arm balance in which one's entire body is supported by the palms");
+			"A horizontal arm balance in which one's entire body is supported by the palms.");
 
 		}
 	});
@@ -88,7 +88,7 @@ $('#2').droppable( {
 			$('#9').hide();
 			$('#15').hide();
 			swal("Lord of the Dance Pose:",
-			"horizontal arm balance in which one's entire body is supported by the palms ");
+			"A standing pose in which one stands on one foot and reaches backward to hold the other ankle.");
 		}
 	});
 
@@ -98,7 +98,7 @@ $('#2').droppable( {
 			$('#12').hide();
 			$('#10').hide();
 			swal("Eagle Pose:",
-			"balance on one foot in a shallow squat in which both sets of limbs are crossed")
+			"A standing pose, on one foot, in a shallow squat, in which both sets of limbs are crossed.")
 		}
 	});
 
@@ -129,7 +129,7 @@ $('#2').droppable( {
 				$('#18').hide();
 				$('#20').hide();
 				swal("Noose Pose:",
-				"A squatting twist in which one wraps their arms around legs with their hands clasped behind their back. ")
+				"A squatting twist in which one wraps one's arms around one's legs with one's hands clasped behind the back. ")
 			}
 		});
 
@@ -160,7 +160,7 @@ $('#2').droppable( {
 			$('#23').hide();
 			$('#24').hide();
 			swal ("Locust Pose:",
-			"A backbend in which one, while face down and parallel to the floor, raises both the legs and the arms.")
+			"A backbend in which one, while face down and parallel to the floor, raises both legs and both arms.")
 		}
 	});
 
@@ -170,7 +170,7 @@ $('#2').droppable( {
 			$('#26').hide();
 			$('#29').hide();
 			swal ("Warrior II Pose: ",
-			"Forward lunge pose in which one arm is extended parallel forward, and the other backward.")
+			"A forward lunge pose in which one arm is extended parallel and forward, and the other parallel and backward.")
 		}
 	});
 
@@ -180,7 +180,7 @@ $('#2').droppable( {
 			$('#27').hide();
 			$('#32').hide();
 			swal ("Warrior III Pose: ",
-			"Standing pose in which one balances on one foot while the rest of the body is held perpendicular to the floor in a straight line. ")
+			"A standing pose in which one balances on one foot while the rest of the body is held perpendicular to the floor in a straight line. ")
 		}
 	});
 
