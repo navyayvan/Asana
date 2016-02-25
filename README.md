@@ -1,6 +1,3 @@
-# Project_1
-game 
-
 <h1>Asana </h1>
 <p>This is an educational, browser-based, drag and drop game for both yoga instructors and enthusiasts. It utilizes jQuery's drag and drop features in combination with Sweet Alert to challenge players into learning sanskrit words for poses(asana). Responsive design has been implemented to start making a mobile friendly site, but more work is needed.</p>
 
